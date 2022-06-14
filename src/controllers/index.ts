@@ -1,3 +1,3 @@
-import Transaction from './test'
+import Transaction from './transaction'
 
 export { Transaction }

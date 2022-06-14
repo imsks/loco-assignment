@@ -9,7 +9,6 @@ app.use(cors())
 app.use(express.json({ limit: '1mb' }))
 
 // Routes
-app.use('/api/v1/transactionservice/transaction', transactionRouter)
-// app.use('/api/v1/transactionservice/types', transactionRouter)
+app.use('/api/v1/transactionservice', transactionRouter)
 
 export default app
