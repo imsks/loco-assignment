@@ -63,6 +63,22 @@ class Transaction {
       statusCode: 200,
     })
   }
+
+  // 3. Get all types of transactions
+  getTypeFromTransactions = async (request: Request, response: Response) => {
+    const { type } = request.params
+
+    const types = this.transactions
+      .filter((transaction) => transaction.type === type)
+      .map((transaction) => transaction.transactionId)
+
+    return generateAPIResponse({
+      response,
+      status: true,
+      data: types,
+      statusCode: 200,
+    })
+  }
 }
 
 export default Transaction

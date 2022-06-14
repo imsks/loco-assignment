@@ -9,5 +9,6 @@ const router = Router()
 router.route('/transaction/:transactionId').put(transaction.updateTransactionByID)
 router.route('/transaction').get(transaction.getTransactionByID)
 router.route('/types').get(transaction.getAllTypesFromTransactions)
+router.route('/types/:type').get(transaction.getTypeFromTransactions)
 
 export default router
