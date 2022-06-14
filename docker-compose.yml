@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  node-firebase-boilerplate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    volumes:
+      - ./src:/home/node/app/src
+      - ./nodemon.json:/home/node/app/nodemon.json
+    container_name: node-firebase-boilerplate
+    env_file:
+      - ./.env.development
+    expose:
+      - ${PORT}
+    ports:
+      - '${PORT}:${PORT}'
+    command: npm run dev
+
+# To Build
+# docker-compose build
+
+# To Run
+# docker-compose up -d

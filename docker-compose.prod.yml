@@ -1,0 +1,7 @@
+version: '3.7'
+
+services:
+  havan-node-api:
+    build:
+      target: production
+    command: npm start
