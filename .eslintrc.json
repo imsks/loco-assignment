@@ -12,6 +12,8 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "no-extra-semi": "warn",
-    "indent": ["error", 2]
+    "indent": ["error", 2],
+    "space-before-function-paren": ["warn", "never"],
+    "comma-dangle": ["error", "always-multiline"]
   }
 }

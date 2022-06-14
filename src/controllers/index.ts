@@ -1,1 +1,3 @@
-export * from './test'
+import Transaction from './test'
+
+export { Transaction }
